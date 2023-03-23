@@ -1,0 +1,53 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+a {
+    color: #278AFF;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1110px;
+    margin: auto;
+}
+
+.header {
+    background: #F8F6F7;
+    padding: 30px 0 130px;
+}
+
+.header-top {
+    margin-bottom: 120px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a.logo {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+}
+
+.navigation li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.phone-info {
+    text-align: right;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+    <div>
+        <header class="header">
+            <div class="container">
+                <div class="header-top">
+                    <a class="logo" href="/">Мир красоты</a>
+    
+                    <nav class="navigation">
+                        <ul>
+                            <li><a href="#">Услуги и цены</a></li>
+                            <li><a href="#">Мастера</a></li>
+                            <li><a href="#">Наши работы</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+    
+                    <div class="phone-info">
+                        <a href="tel:84996861762">8 (499) 686-17-62</a>
+                        <div>с 10.00 до 19.00 без выходных</div>
+                    </div>
+                </div>
+    
+                <div>
+                    <h1>Создай свой образ вместе с нами</h1>
+                    <p>Идеальный образ за 60 минут</p>
+                    <button>Записаться онлайн</button>
+                </div>
+            </div>
+        </header>
+
+        <br>
+        <br>
+    
+        <main>
+            <div class="container">
+                <form action="/form" method="post">
+                    <div>
+                        <label for="firstName">Имя</label>
+                        <input id="firstName" type="text" placeholder="Иван" required name="firstName">
+                    </div>
+    
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="mail@mail.com" required name="email">
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" name="policy"> Согласен с правилами обработки перс. данных
+                    </div>
+    
+                    <div>
+                        <button type="submit">Подписаться</button>
+                    </div>
+    
+                    <textarea cols="30" rows="10"></textarea>
+    
+                    <input type="radio" name="radio">
+                    <input type="radio" name="radio">
+                    <input type="radio" name="radio">
+    
+                    <input type="file">
+                    <input type="date">
+                </form>
+    
+                <br>
+    
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Cost</th>
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr>
+                            <td rowspan="2" colspan="2">1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+    
+                    <tfoot>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                    </tfoot>
+                </table>
+    
+                <div hidden>
+                    <aside>
+                        <nav>
+                            <ul>
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+        
+                    <article>
+                        <section>
+                            <h1>Загловок первого уровня</h1>
+                            
+                            <p>Lorem ipsum dolor <strong>sit amet consectetur</strong> adipisicing elit. Illum, <em>earum tenetur nobis asperiores <a href="https://doka.guide/" target="_blank">sapiente totam id voluptates</a> voluptatibus</em> <a href="#list">voluptate</a> <span>accusantium consequuntur</span> sunt inventore fuga suscipit consequatur quidem explicabo, accusamus magni.</p>
+                        </section>
+        
+                        <section>
+                            <h6>Заголовок шестого уровня</h6>
+            
+                            <p><img src="https://code.visualstudio.com/assets/home/home-screenshot-win.png" alt="Image"></p>
+            
+                            <!-- Маркированный список -->
+                            <ul>
+                                <li>List item 1</li>
+                                <li>
+                                    List item 1
+            
+                                    <ul>
+                                        <li>List item 1</li>
+                                        <li>List item 1</li>
+                                        <li>List item 1</li>
+                                        <li>List item 1</li>
+                                    </ul>
+                                </li>
+                                <li>List item 1</li>
+                                <li>List item 1</li>
+                            </ul>
+                        </section>
+        
+                        <section>
+                            <ol id="list">
+                                <li>List item 1</li>
+                                <li>List item 1</li>
+                                <li>List item 1</li>
+                                <li>List item 1</li>
+                            </ol>
+                        </section>
+                    </article>
+                    
+                </div>
+            </div>
+        </main>
+
+        <br>
+        <br>
+    
+        <footer>
+            <div class="container">
+                Footer
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+</html>
