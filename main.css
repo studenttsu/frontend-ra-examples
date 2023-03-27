@@ -1,6 +1,5 @@
 html {
     box-sizing: border-box;
-    background-color: green;
 }
 
 *, *:before, *:after {
@@ -22,6 +21,11 @@ body {
 
 .header {
     background: #F8F6F7;
+    overflow: hidden;
+}
+
+.header .container {
+    position: relative;
     padding: 30px 0 130px;
 }
 
@@ -51,4 +55,70 @@ a.logo {
 
 .phone-info {
     text-align: right;
+}
+
+.square {
+    width: 200px;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    background-color: #ccc;
+    position: fixed;
+    transition: .3s right;
+}
+
+.square.opened {
+    right: 0;
+}
+
+.header-top,
+.header-hero {
+    z-index: 1;
+    position: relative;
+}
+
+.girl {
+    position: absolute;
+    bottom: 0;
+    right: 60px;
+    z-index: 0;
+}
+
+.girl:hover:before {
+    transform: scale(1.05);
+}
+
+.girl:before {
+    content: '';
+    width: 472px;
+    height: 472px;
+    border-radius: 50%;
+    background-color: #FB9475;
+    position: absolute;
+    bottom: -110px;
+    right: 0;
+    transition: .3s transform;
+}
+
+.girl img {
+    display: block;
+    position: relative;
+}
+
+.first,
+.last {
+    height: 100px;
+}
+
+.first {
+    background-color: green;
+    margin-bottom: 50px;
+}
+
+.last {
+    background-color: gray;
+    padding-top: 50px;
+}
+
+.last .elem {
 }
