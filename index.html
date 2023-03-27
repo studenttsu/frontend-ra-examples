@@ -4,173 +4,161 @@
     <meta charset="UTF-8">
     <title>Document</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
 
-    <!-- Comment -->
-
     <div>
         <header class="header">
             <div class="container">
-                <div class="header-top">
+                <div class="header__top">
                     <a class="logo" href="/">Мир красоты Sprint2</a>
     
-                    <nav class="navigation">
-                        <ul>
-                            <li><a href="#">Услуги и цены</a></li>
-                            <li><a href="#">Мастера</a></li>
-                            <li><a href="#">Наши работы</a></li>
-                            <li><a href="#">О нас</a></li>
-                            <li><a href="#">Контакты</a></li>
+                    <nav class="navigation header__navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item"><a class="navigation__link" href="#">Услуги и цены</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#">Мастера</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#">Наши работы</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#">О нас</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#">Контакты</a></li>
                         </ul>
                     </nav>
     
-                    <div class="phone-info">
-                        <a href="tel:84996861762">8 (499) 686-17-62</a>
-                        <div>с 10.00 до 19.00 без выходных</div>
+                    <div class="phone-info header__phone">
+                        <a class="phone-info__tel" href="tel:84996861762">8 (499) 686-17-62</a>
+                        <time class="phone-info__time">с 10.00 до 19.00 без выходных</time>
                     </div>
                 </div>
     
-                <div class="header-hero">
-                    <h1>Создай свой образ вместе с нами</h1>
-                    <p>Идеальный образ за 60 минут</p>
-                    <button>Записаться онлайн</button>
+                <div class="header__hero hero">
+                    <h1 class="hero__title">Создай свой образ вместе с нами</h1>
+                    <p class="hero__subtitle">Идеальный образ за 60 минут</p>
+                    <button class="btn hero__btn">Записаться онлайн</button>
                 </div>
 
-                <div class="girl">
+                <div class="header__girl">
                     <img src="./images/girl.png" alt="Girl">
                 </div>
+
+                <ul class="social social--vertical">
+                    <li class="social__item"><a class="social__link" href="#">1</a></li>
+                    <li class="social__item"><a class="social__link" href="#">2</a></li>
+                    <li class="social__item"><a class="social__link" href="#">3</a></li>
+                </ul>
             </div>
         </header>
 
-        <br>
-        <br>
-    
+        <img src="./images/girl.png" alt="">
+
         <main>
-            <div class="container">
-                <form action="/form" method="post">
-                    <div>
-                        <label for="firstName">Имя</label>
-                        <input id="firstName" type="text" placeholder="Иван" required name="firstName">
-                    </div>
-    
-                    <div>
-                        <label for="email">Email</label>
-                        <input id="email" type="email" placeholder="mail@mail.com" required name="email">
-                    </div>
-    
-                    <div>
-                        <input type="checkbox" name="policy"> Согласен с правилами обработки перс. данных
-                    </div>
-    
-                    <div>
-                        <button type="submit">Подписаться</button>
-                    </div>
-    
-                    <textarea cols="30" rows="10"></textarea>
-    
-                    <input type="radio" name="radio">
-                    <input type="radio" name="radio">
-                    <input type="radio" name="radio">
-    
-                    <input type="file">
-                    <input type="date">
-                </form>
-    
-                <br>
-    
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>Cost</th>
-                        </tr>
-                    </thead>
-    
-                    <tbody>
-                        <tr>
-                            <td rowspan="2" colspan="2">1</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                        </tr>
-                    </tbody>
-    
-                    <tfoot>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                        </tr>
-                    </tfoot>
-                </table>
-    
-                <div hidden>
-                    <aside>
-                        <nav>
-                            <ul>
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                                <li><a href="#">Link 3</a></li>
-                                <li><a href="#">Link 4</a></li>
-                            </ul>
-                        </nav>
-                    </aside>
-        
-                    <article>
-                        <section>
-                            <h1>Загловок первого уровня</h1>
-                            
-                            <p>Lorem ipsum dolor <strong>sit amet consectetur</strong> adipisicing elit. Illum, <em>earum tenetur nobis asperiores <a href="https://doka.guide/" target="_blank">sapiente totam id voluptates</a> voluptatibus</em> <a href="#list">voluptate</a> <span>accusantium consequuntur</span> sunt inventore fuga suscipit consequatur quidem explicabo, accusamus magni.</p>
-                        </section>
-        
-                        <section>
-                            <h6>Заголовок шестого уровня</h6>
-            
-                            <p><img src="https://code.visualstudio.com/assets/home/home-screenshot-win.png" alt="Image"></p>
-            
-                            <!-- Маркированный список -->
-                            <ul>
-                                <li>List item 1</li>
-                                <li>
-                                    List item 1
-            
-                                    <ul>
-                                        <li>List item 1</li>
-                                        <li>List item 1</li>
-                                        <li>List item 1</li>
-                                        <li>List item 1</li>
-                                    </ul>
-                                </li>
-                                <li>List item 1</li>
-                                <li>List item 1</li>
-                            </ul>
-                        </section>
-        
-                        <section>
-                            <ol id="list">
-                                <li>List item 1</li>
-                                <li>List item 1</li>
-                                <li>List item 1</li>
-                                <li>List item 1</li>
-                            </ol>
-                        </section>
-                    </article>
+            <section id="about" class="section">
+                <div class="container">
                     
+                    <div class="section__header">
+                        <h2 class="section__title">О салоне</h2>
+                    </div>
+
+                    <div class="section__inner">
+                        О салоне
+
+                        <div style="max-width: 500px;">
+                            <img class="adaptive-img" src="https://imgfon.ru/Img/Crop/2560x2048/Animals/koshka-snejnyiy_bars-golubyie_glaza-vzglyad-sneg.jpg?img.1" alt="">
+                        </div>
+                    </div>
+
                 </div>
-            </div>
+            </section><!-- #about -->
+
+            <section class="section">
+                <div class="container">
+
+                    <div class="section__inner">
+                        <div class="service-card">
+                            <a href="#" class="service-card__img">
+                                <img src="" alt="">
+                            </a>
+
+                            <div class="service-card__info">
+                                <h4 class="service-card__title">Заголовок</h4>
+                                <p class="service-card__descr">Описание</p>
+                                <button class="btn">Записаться</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+
+                    <div class="section__header">
+                        <h2 class="section__title">Услуги и цены</h2>
+                    </div>
+
+                    <div class="section__inner">
+                        Услуги и цены
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section section--gray">
+                <div class="container">
+
+                    <div class="section__header">
+                        <h2 class="section__title">Мастера</h2>
+                    </div>
+
+                    <div class="section__inner">
+                        Мастера
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+
+                    <div class="section__header">
+                        <h2 class="section__title">Наши работы</h2>
+
+                        <div class="section__actions">
+                            <button>prev</button>
+                            <button>next</button>
+                        </div>
+                    </div>
+
+                    <div class="section__inner">
+                        Наши работы
+                    </div>
+
+                </div>
+            </section>
         </main>
 
-        <br>
-        <br>
+        <section>
+            <ul class="social">
+                <li class="social__item"><a class="social__link" href="#">1</a></li>
+                <li class="social__item"><a class="social__link" href="#">2</a></li>
+                <li class="social__item"><a class="social__link" href="#">3</a></li>
+            </ul>
+        </section>
     
-        <footer>
+        <footer class="footer">
             <div class="container">
-                Footer
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a class="navigation__link" href="#">Услуги и цены</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#">Мастера</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#">Наши работы</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#">О нас</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#">Контакты</a></li>
+                    </ul>
+                </nav>
             </div>
         </footer>
     </div>
