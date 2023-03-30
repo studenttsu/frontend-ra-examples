@@ -1,0 +1,36 @@
+/* Large Devices, Wide Screens */ 
+@media only screen and (max-width: 1280px) { 
+} 
+/* Medium Devices, Desktops */ 
+@media only screen and (max-width: 992px) { 
+    .header__girl {
+        opacity: 0.4;
+    }
+
+    .header__hero {
+        text-align: center;
+    }
+} 
+/* Small Devices, Tablets */ 
+@media only screen and (max-width: 768px) {
+    .header__top {
+        flex-direction: column;
+    }
+} 
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width: 480px) { 
+    .header .container {
+        padding-bottom: 60px;
+    }
+
+    .header__top {
+        margin-bottom: 60px;
+    }
+
+    .header__navigation {
+        display: none;
+    }
+} 
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width: 320px) { 
+}

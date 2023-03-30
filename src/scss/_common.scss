@@ -1,0 +1,27 @@
+html {
+    box-sizing: border-box;
+    background-color: var(--gray);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+a {
+    color: #278AFF;
+}
+
+body {
+    font-family: sans-serif;
+    min-width: 320px;
+}
+
+.container {
+    max-width: 1110px;
+    margin: auto;
+}
+
+.adaptive-img {
+    max-width: 100%;
+    height: auto;
+}
