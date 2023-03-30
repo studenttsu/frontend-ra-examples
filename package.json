@@ -1,0 +1,31 @@
+{
+  "name": "ra-frontend6-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studenttsu/frontend-ra-examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/studenttsu/frontend-ra-examples/issues"
+  },
+  "homepage": "https://github.com/studenttsu/frontend-ra-examples#readme",
+  "devDependencies": {
+    "browser-sync": "^2.29.1",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.60.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
