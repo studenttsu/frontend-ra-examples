@@ -125,4 +125,45 @@ a.logo {
     padding-top: 50px;
 }
 
+.master-card {
+    &__img {
+        width: 200px;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+
+        img {
+            object-fit: cover;
+        }
+    }
+}
+
+.container-wider {
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    flex-shrink: 0;
+    width: 30%;
+    border: 1px solid;
+    padding-bottom: 30%;
+
+    &:hover:before:after {
+        opacity: 1;
+    }
+
+    img {
+        position: absolute;
+    }
+
+    &:after {
+        content: 'Увеличить';
+        padding-bottom: 60px;
+        background-image: url();
+        user-select: none;
+    }
+}
+
 @import 'media';

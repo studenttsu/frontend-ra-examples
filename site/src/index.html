@@ -10,7 +10,53 @@
 </head>
 <body>
 
+    <div hidden>
+        <div class="parent">
+            <div>
+                <form id="contact-form">
+                    <label>
+                        <span>Name:</span>
+                        <input type="text" placeholder="Name" name="name" required>
+                    </label>
+            
+                    <label>
+                        <span>Phone:</span>
+                        <input type="text" placeholder="Phone" name="phone" required>
+                    </label>
+            
+                    <button>Send</button>
+                </form>
+            </div>
+
+            <ul id="list">
+                <li data-id="1" data-name="item1">Item 1</li>
+                <button>123123</button>
+                <li data-id="2">Item 2</li>
+                <li data-id="3">Item 3</li>
+            </ul>
+        </div>
+    </div>
+
     <div>
+        <section class="section section--gray" hidden>
+            <div class="container">
+
+                <div class="section__header">
+                    <h2 class="section__title">Мастера</h2>
+                </div>
+
+                <div class="section__inner">
+                    <div class="master-card">
+                        <div class="master-card__img" style="background-image: url('https://images.hdqwalls.com/wallpapers/blonde-girl-outdoor-looking-at-viewer-4k-5p.jpg');">
+                    
+                            <!-- <img src="" alt=""> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <header class="header">
             <div class="container">
                 <div class="header__top">
@@ -105,37 +151,30 @@
                 </div>
             </section>
 
-            <section class="section section--gray">
-                <div class="container">
-
-                    <div class="section__header">
-                        <h2 class="section__title">Мастера</h2>
-                    </div>
-
-                    <div class="section__inner">
-                        Мастера
-                    </div>
-
-                </div>
-            </section>
-
             <section class="section">
-                <div class="container">
 
-                    <div class="section__header">
+                <div class="section__header">
+                    <div class="container">
                         <h2 class="section__title">Наши работы</h2>
-
+    
                         <div class="section__actions">
                             <button>prev</button>
                             <button>next</button>
                         </div>
+                    
                     </div>
-
-                    <div class="section__inner">
-                        Наши работы
-                    </div>
-
                 </div>
+
+                <div class="section__inner">
+                    <div class="container-wider">
+                        <div class="portfolio-item" style="background-image: url()"></div>
+                        <div class="portfolio-item" style="background-image: url()"></div>
+                        <div class="portfolio-item" style="background-image: url()"></div>
+                        <div class="portfolio-item" style="background-image: url()"></div>
+                        <div class="portfolio-item" style="background-image: url()"></div>
+                    </div>
+                </div>
+
             </section>
         </main>
 
@@ -162,6 +201,12 @@
         </footer>
     </div>
 
+    <script
+        src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous"></script>
+
+    <script src="./js/bundle.min.js"></script>
 
 </body>
 </html>
