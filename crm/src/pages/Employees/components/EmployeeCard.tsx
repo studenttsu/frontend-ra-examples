@@ -1,4 +1,4 @@
-import { EmployeeDto } from "../../common/dto";
+import { EmployeeDto } from "../../../common/dto";
 
 interface EmployeeCardProps {
     employee: EmployeeDto;

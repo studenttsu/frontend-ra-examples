@@ -1,91 +1,40 @@
-import React, { ButtonHTMLAttributes, ReactNode, useRef, useState, useEffect, FormEvent } from 'react';
+import { Outlet, Link, useLocation, Navigate } from 'react-router-dom';
 import './App.css';
-
-import { EmployeeDto } from './common/dto';
-import { EmployeeCard } from './components/EmployeeCard';
-import { EmployeesApi } from './common/api';
-
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
-  onClick?: () => {};
-}
-
-function Button(props: ButtonProps) {
-  const handleClick = () => {
-
-    if (props.onClick) {
-      props.onClick();
-    }
-  }
-
-  return (
-    <button {...props} onClick={handleClick}>{props.children}</button>
-  )
-}
-
-interface EmployeeCreateFormData {
-  name: string;
-  lastName: string;
-}
-
-function EmployeeCreateForm({ onCreate }: { onCreate: (data: EmployeeCreateFormData) => void}) {
-  const [name, setName] = useState('');
-  const [lastName, setLastName] = useState('');
-
-  const handleForm = (event: FormEvent) => {
-    event.preventDefault();
-    onCreate({ name, lastName });
-  }
-
-  return (
-    <form onSubmit={handleForm}>
-      <input value={name} onChange={e => setName(e.target.value)} name="name" placeholder="Имя" />
-      <input value={lastName} onChange={e => setLastName(e.target.value)} name="lastName" placeholder="Фамилия" />
-      <Button>Добавить</Button>
-    </form>
-  )
-}
+import { Button } from './components/Button';
+import { useAuth } from './contexts/AuthContext';
 
 function App() {
-  const [employees, setEmployees] = useState<EmployeeDto[]>([]);
-  const employeesListRef = useRef<any>();
+  const { isLoggedIn, logout } = useAuth();
+  const location = useLocation();
 
-  useEffect(() => {
-    EmployeesApi.getAll().then(setEmployees);
-  }, []);
+  if (!isLoggedIn) {
+    return <Navigate to="/login" />;
+  }
 
-  const removeEmployee = (employeeId: number) => {
-    setEmployees(employees.filter(x => x.id !== employeeId));
-  };
+  return <>
+    {isLoggedIn && (
+      <nav className="nav" style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <ul>
+          <li className={location.pathname === '/' ? 'active' : undefined}>
+            <Link to="/">Заявки</Link>
+            </li>
+          <li className={location.pathname === '/employees' ? 'active' : undefined}>
+            <Link to="/employees">Сотрудники</Link>
+            </li>
+        </ul>
 
-  const createEmployee = (data: EmployeeCreateFormData) => {
-    setEmployees(employees.concat({
-      "firstName": data.name,
-      "patronymic": "Сергеевна",
-      "surName": data.lastName,
-      "position": "Мастер ногтевого сервиса",
-      "photo": "http://localhost:3003/api/staff/photo/d7be2a0cc36277ba0d5fcb3b325389a5.jpg",
-      "startWorkDate": "2023-04-17T12:11:35.178Z",
-      "id": employees.length + 1,
-      "fullName": "Краснова Ирина Сергеевна",
-    }));
-  };
+        <div>
+          <Button onClick={logout}>Выход</Button>
+        </div>
+      </nav>
+    )}
 
-  return (
-    <>
-      <EmployeeCreateForm onCreate={createEmployee} />
+    <main>
+      <Outlet />
+    </main>
 
-      {employees.length === 0 && <p>Нет данных</p>}
-
-      <div ref={employeesListRef} className="employees">
-        {employees.map(employee => <EmployeeCard 
-          onRemove={() => removeEmployee(employee.id)} 
-          key={employee.id} 
-          employee={employee} 
-        />)}
-      </div>
-    </>
-  );
+    <footer></footer>
+  </>
 }
 
 export default App;

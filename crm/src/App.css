@@ -2,3 +2,7 @@
     display: flex;
     gap: 20px;
 }
+
+.nav li.active {
+    font-weight: bold;
+}
