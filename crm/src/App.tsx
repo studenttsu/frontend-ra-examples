@@ -2,10 +2,15 @@ import { Outlet, Link, useLocation, Navigate } from 'react-router-dom';
 import './App.css';
 import { Button } from './components/Button';
 import { useAuth } from './contexts/AuthContext';
+import { useEffect } from 'react';
 
 function App() {
-  const { isLoggedIn, logout } = useAuth();
+  const { isLoggedIn, logout, checkAuth } = useAuth();
   const location = useLocation();
+
+  useEffect(() => {
+    checkAuth();
+  }, []);
 
   if (!isLoggedIn) {
     return <Navigate to="/login" />;

@@ -1,13 +1,13 @@
 import { EmployeeDto } from "../dto";
-import { HttpService } from "./HttpService";
+import { HttpService } from "../services/HttpService";
 
 class EmployeesApi extends HttpService {
     constructor() {
         super('staff');
     }
 
-    getAll() {
-        return this.get<EmployeeDto>('');
+    getAll(): Promise<EmployeeDto[]> {
+        return this.get('');
     }
 }
 
