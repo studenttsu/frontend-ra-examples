@@ -1,4 +1,14 @@
-import './dom';
-import { User } from './User';
+import 'slick-carousel/slick/slick';
+import '@fancyapps/ui';
+import $ from 'jquery';
 
-new User();
+function init() {
+    $('.slider').slick({
+        slidesToShow: 4,
+        prevArrow: '.slider-prev',
+        nextArrow: '.slider-next',
+        infinite: false,
+    });
+}
+
+init();
