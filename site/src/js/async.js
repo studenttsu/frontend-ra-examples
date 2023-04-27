@@ -193,7 +193,7 @@ init();
 
 
 
-fetch(`path?search=value`, {
+fetch('path?search=value', {
     method: 'DELETE',
 });
 

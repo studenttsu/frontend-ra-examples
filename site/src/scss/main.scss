@@ -1,179 +1,179 @@
-@import 'libs';
-@import 'common';
-@import 'mixins';
+@import url('libs');
+@import url('common');
+@import url('mixins');
 
 $gray: #ccc;
 
 :root {
-    --gray: #ccc;
+  --gray: #ccc;
 }
 
 %defaultLink {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .header {
-    background: #F8F6F7;
-    overflow: hidden;
+  background: #f8f6f7;
+  overflow: hidden;
 
-    .container {
-        position: relative;
-        padding: 30px 0 130px;
+  .container {
+    position: relative;
+    padding: 30px 0 130px;
+  }
+
+  &__top {
+    margin-bottom: 120px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__top,
+  &__hero {
+    z-index: 1;
+    position: relative;
+  }
+
+  &__girl {
+    position: absolute;
+    bottom: 0;
+    right: 60px;
+    z-index: 0;
+
+    &:hover::before {
+      transform: scale(1.05);
     }
 
-    &__top {
-        margin-bottom: 120px;
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
+    &::before {
+      content: '';
+      width: 472px;
+      height: 472px;
+      border-radius: 50%;
+      background-color: #fb9475;
+      position: absolute;
+      bottom: -110px;
+      right: 0;
+      transition: .3s transform;
     }
 
-    &__top,
-    &__hero {
-        z-index: 1;
-        position: relative;
+    img {
+      display: block;
+      position: relative;
     }
 
-    &__girl {
-        position: absolute;
-        bottom: 0;
-        right: 60px;
-        z-index: 0;
-
-        &:hover:before {
-            transform: scale(1.05);
-        }
-
-        &:before {
-            content: '';
-            width: 472px;
-            height: 472px;
-            border-radius: 50%;
-            background-color: #FB9475;
-            position: absolute;
-            bottom: -110px;
-            right: 0;
-            transition: .3s transform;
-        }
-
-        img {
-            display: block;
-            position: relative;
-        }
-
-        @include isMobile() {
-            display: none;
-        }
+    @include isMobile() {
+      display: none;
     }
+  }
 }
 
 a.logo {
-    $color: #333;
+  $color: #333;
 
-    @extend %defaultLink;
+  @extend %defaultLink;
 
-    font-size: 24px;
-    color: $color;
-    font-weight: bold;
-    text-decoration: none;
+  font-size: 24px;
+  color: $color;
+  font-weight: bold;
+  text-decoration: none;
 
-    &:hover {
-        color: darken($gray, 0.5%);
-    }
+  &:hover {
+    color: darken($gray, 0.5%);
+  }
 }
 
 .navigation__list {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .navigation__item:not(:last-child) {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .phone-info {
-    text-align: right;
+  text-align: right;
 }
 
 .square {
-    width: 200px;
-    height: 100%;
-    top: 0;
-    right: -100%;
-    background-color: #ccc;
-    position: fixed;
-    transition: .3s right;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  background-color: #ccc;
+  position: fixed;
+  transition: .3s right;
 }
 
 .square.opened {
-    right: 0;
+  right: 0;
 }
 
 .first,
 .last {
-    height: 100px;
+  height: 100px;
 }
 
 .first {
-    background-color: green;
-    margin-bottom: 50px;
+  background-color: green;
+  margin-bottom: 50px;
 }
 
 .last {
-    background-color: gray;
-    padding-top: 50px;
+  background-color: gray;
+  padding-top: 50px;
 }
 
 .master-card {
-    &__img {
-        width: 200px;
-        height: 300px;
-        background-size: cover;
-        background-position: center;
+  &__img {
+    width: 200px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
 
-        img {
-            object-fit: cover;
-        }
+    img {
+      object-fit: cover;
     }
+  }
 }
 
 .container-wider {
-    max-width: 500px;
-    display: flex;
-    flex-wrap: wrap;
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .portfolio-item {
-    flex-shrink: 0;
-    width: 30%;
-    border: 1px solid;
-    padding-bottom: 30%;
+  flex-shrink: 0;
+  width: 30%;
+  border: 1px solid;
+  padding-bottom: 30%;
 
-    &:hover:before:after {
-        opacity: 1;
-    }
+  &:hover::before::after {
+    opacity: 1;
+  }
 
-    img {
-        position: absolute;
-    }
+  img {
+    position: absolute;
+  }
 
-    &:after {
-        content: 'Увеличить';
-        padding-bottom: 60px;
-        background-image: url();
-        user-select: none;
-    }
+  &::after {
+    content: 'Увеличить';
+    padding-bottom: 60px;
+    background-image: url();
+    user-select: none;
+  }
 }
 
 .slider {
-    &__item {
-        padding: 0 15px;
+  &__item {
+    padding: 0 15px;
 
-        img {
-            width: 100%;
-        }
+    img {
+      width: 100%;
     }
+  }
 }
 
-@import 'media';
+@import url('media');

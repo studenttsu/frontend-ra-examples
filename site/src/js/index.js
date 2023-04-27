@@ -1,6 +1,6 @@
-// import 'slick-carousel/slick/slick';
-// import '@fancyapps/ui';
-// import $ from 'jquery';
+import 'slick-carousel/slick/slick';
+import '@fancyapps/ui';
+import $ from 'jquery';
 
 import './async';
 
