@@ -4,11 +4,10 @@ const boxes = Array.from(document.querySelectorAll('div'));
 
 const contactForm = document.getElementById('contact-form');
 
-
 console.log({
     contactForm,
     firstDiv,
-    boxes: Array.from(boxes)
+    boxes: Array.from(boxes),
 });
 
 // Навигация по dom-дереву
@@ -23,22 +22,27 @@ console.log({
 // closest()
 
 // Перебирать dom-элементы и фильтровать
-const containers = boxes.filter(el => el.classList.contains('container'));
-console.log(containers.map(el => {
-    return {
-        node: el,
-        children: el.children
-    };
-}));
+const containers = boxes.filter((el) => el.classList.contains('container'));
+console.log(
+    containers.map((el) => {
+        return {
+            node: el,
+            children: el.children,
+        };
+    })
+);
 
 // Создание элементов, удаление, методы вставки
 const newElement = document.createElement('div');
 newElement.textContent = '12313';
 
-newElement.insertAdjacentHTML('afterbegin', `
+newElement.insertAdjacentHTML(
+    'afterbegin',
+    `
     <h1>Заголовок</h1>
     <p>Подзаголовок</p>
-`);
+`
+);
 
 contactForm.prepend(newElement);
 // contactForm.append(newElement);
@@ -60,7 +64,6 @@ newElement.classList.contains('active');
 
 newElement.style.background = 'url("")';
 
-
 // События
 function handleSubmit(event) {
     event.preventDefault();
@@ -69,22 +72,20 @@ function handleSubmit(event) {
 
     console.log({
         name: name.value,
-        phone: phone.value
+        phone: phone.value,
     });
 
     // ОТправка данных fetch на бэкенд
-    
+
     this.reset();
 }
 
 contactForm.addEventListener('submit', handleSubmit);
 contactForm.removeEventListener('submit', handleSubmit);
 
-
-
 const list = document.getElementById('list');
 
-list.addEventListener('click', event => {
+list.addEventListener('click', (event) => {
     if (event.target.tagName === 'LI') {
         console.log(event.target);
     }
