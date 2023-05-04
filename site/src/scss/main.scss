@@ -1,6 +1,6 @@
-@import url('libs');
-@import url('common');
-@import url('mixins');
+@use 'libs';
+@use 'common';
+@use 'mixins';
 
 $gray: #ccc;
 

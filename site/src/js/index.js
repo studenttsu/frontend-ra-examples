@@ -5,12 +5,12 @@ import $ from 'jquery';
 import './async';
 
 function init() {
-    // $('.slider').slick({
-    //     slidesToShow: 4,
-    //     prevArrow: '.slider-prev',
-    //     nextArrow: '.slider-next',
-    //     infinite: false,
-    // });
+    $('.slider').slick({
+        slidesToShow: 4,
+        prevArrow: '.slider-prev',
+        nextArrow: '.slider-next',
+        infinite: false,
+    });
 }
 
 init();
