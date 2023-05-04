@@ -20,6 +20,7 @@ module.exports = {
     'window.jQuery': 'jquery',
   },
   optimization: {
+    minimize: isProduction,
     minimizer: [new TerserPlugin({
       extractComments: false,
     })],
