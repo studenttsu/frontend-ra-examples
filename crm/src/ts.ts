@@ -84,3 +84,5 @@ collection[4] = [123];
 function get(arg: number): boolean {
     return true;
 }
+
+export {}
